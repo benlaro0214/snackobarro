@@ -5,7 +5,6 @@ const hamburger = require("../models/burgers.js");
 
 // Get data and pipe it to layout.
 routes.get("/", function(req, res) {
-    console.log("Route Path Hit");
     hamburger.selectAll((data) => {
     handlebarsObject = { burger: data};
     res.render("index", handlebarsObject);

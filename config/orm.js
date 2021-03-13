@@ -2,7 +2,6 @@
 const connection = require("../config/connection.js");
 const tableName = "burgers";
 
-
 // Burger time engine - Select-add-update
 
 const orm = {
@@ -20,26 +19,21 @@ const orm = {
     let queryStatement = `INSERT INTO  ${tableName} (${cols.toString()}) VALUES (${BurgerMarks(vals.length)});`;
     connection.query(queryStatement, vals, (err, result) => {
       if (err) throw err;
-      console.log("Sucesfully Added");
       callback(result);
     });
 
   },
 
- //This will update the name of the burger
-
   updateOne : (tableName, cols, vals, condition, callback) =>{
     let queryStatement = `UPDATE ${tableName} SET ${cols.toString()} = ? WHERE ${condition}`;
     connection.query(queryStatement, vals, (err, result) => {
       if (err) throw err;
-      console.log("Sucesfully Updated");
       callback(result);
     });
 
   }
 
 }
-
 
 function BurgerMarks(num) {
   var arr = [];
@@ -48,8 +42,6 @@ function BurgerMarks(num) {
   }
   return arr.toString();
 }
-
-
 
 module.exports = orm;
 

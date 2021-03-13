@@ -15,17 +15,10 @@ body {
     align-self: center; }
   body #headerSection {
     grid-area: headerSection;
-    background: rgba(8, 8, 8, 0.6);
     text-align: center;
     color: white;
     position: relative;
     min-height: 100%; }
-    body #headerSection h2 {
-      margin: 0;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%); }
   body #middleSection {
     grid-area: middleSection;
     display: grid;
@@ -35,15 +28,15 @@ body {
     color: white; }
     body #middleSection .leftMiddle {
       display: grid;
-      grid-area: leftMiddle;
-      border: 0px solid white; }
+      grid-area: leftMiddle;}
+
     body #middleSection .centerMiddle {
       display: grid;
-      grid-area: centerMiddle;
-      border: 0px solid red; }
+      grid-area: centerMiddle;}
+    
     body #middleSection .rightMiddle {
       display: grid;
-      grid-area: rightMiddle;
-      border: 0px solid yellow; }
+      grid-area: rightMiddle;}
+     
   body #footerSection {
     grid-area: footerSection; }
